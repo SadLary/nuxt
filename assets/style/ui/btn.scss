@@ -1,0 +1,100 @@
+.btn {
+  @include reset-btn;
+  @include center;
+  cursor: pointer;
+  color: $white;
+
+  font-family: BebasNeueBold, sans-serif;
+
+  &--default {
+    position: relative;
+    opacity: 1;
+
+    border: 2px solid rgba($white, 1);
+    box-sizing: border-box;
+    box-shadow: none !important;
+
+    &:hover {
+      color: currentColor;
+    }
+
+    &-green {
+      border: 2px solid rgba($green1, 1);
+      color: $green1;
+    }
+  }
+
+  &--green {
+    background: $green1;
+    color: $white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: BebasNeueBold, sans-serif;
+    font-size: 20px;
+    letter-spacing: 3.75px;
+
+    cursor: pointer;
+    transition: background .3s 0s;
+    box-shadow: none !important;
+
+    &:hover {
+      color: $white;
+      background: $green2;
+    }
+  }
+
+  // Size
+  &--square {
+    width: 68px;
+    height: 68px;
+  }
+
+  &--xl {
+    width: 115px;
+    height: 40px;
+  }
+
+  &--xl1 {
+    width: 135px;
+    height: 40px;
+  }
+
+  &--md {
+    width: 240px;
+    height: 40px;
+  }
+
+  &--md1 {
+    width: 200px;
+    height: 56px;
+  }
+
+  &--lg {
+    width: 270px;
+    height: 65px;
+  }
+
+  &--lg1 {
+    width: 240px;
+    height: 65px;
+  }
+
+  &--lg2 {
+    width: 280px;
+    height: 70px;
+  }
+
+  &--lg3 {
+    width: 300px;
+    height: 70px;
+  }
+
+  &--fluid {
+    flex: 1;
+    height: 100%;
+    margin: 0 10px;
+  }
+}

@@ -1,0 +1,113 @@
+.cart {
+  color: $dark2;
+  background: $white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+
+  flex: 0 0 310px;
+  position: relative;
+
+  margin: 0 25px;
+
+  &__thumb {
+    width: 100%;
+    height: 280px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 24px;
+  }
+
+  &__title {
+    font-family: BebasNeueBold, sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+
+    padding: 0 0 10px;
+  }
+
+  &__moreInfo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding: 0 0 10px;
+  }
+
+  &__params {
+    @include reset-list;
+
+    & > li {
+      font-size: 12px;
+      line-height: 18px;
+
+      color: $gray1;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+
+    &-old {
+      color: $gray2;
+      padding: 0 12px 0 0;
+    }
+
+    &-now {
+      font-weight: bold;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    height: 60px;
+
+    &-col {
+      width: 56px;
+      height: 100%;
+      background: $white1;
+
+      @include center;
+
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: $dark2;
+      opacity: 0.5;
+    }
+
+    &-favorite {
+      width: 56px;
+      height: 100%;
+
+      opacity: 0.8;
+      border: 2px solid $green1;
+      box-sizing: border-box;
+
+      @include center;
+    }
+
+    &-addCart {
+      font-size: 16px !important;
+      letter-spacing: 2px !important;
+    }
+  }
+
+  &--sell:after {
+    @include sell(56px, 12px);
+
+    top: 0;
+    left: 25px;
+  }
+}
